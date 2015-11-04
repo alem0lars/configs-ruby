@@ -4,9 +4,7 @@ elems:
     only:
       features:
         - rbenv
-    notes: >
-      This default rbenv gems will be used only if the extension 'rbenv-default-gems'
-      is installed
+    notes: This default rbenv gems will be used only if the extension 'rbenv-default-gems' is installed
 
   - src: elems/(irbrc)$
     dst: ~/.<1>
