@@ -1,12 +1,15 @@
 elems:
-  - src: ruby/(rbenv-default-gems)$
-    dst: ~/.rbenv-default-gems
+  - src: elems/(rbenv-default-gems)$
+    dst: ~/.<1>
     only:
       features:
         - rbenv
+    notes: >
+      This default rbenv gems will be used only if the extension 'rbenv-default-gems'
+      is installed
 
-  - src: ruby/irbrc
-    dst: ~/.irbrc
+  - src: elems/(irbrc)$
+    dst: ~/.<1>
     only:
       features:
         - ruby
