@@ -1,0 +1,16 @@
+elems
+  - src: ruby/(rbenv-default-gems)$
+    dst: ~/.rbenv-default-gems
+    only:
+      features:
+        - rbenv
+
+  - src: ruby/irbrc
+    dst: ~/.irbrc
+    only:
+      features:
+        - ruby
+    notes: |
+      The following features will be enabled if their requirements are met:
+        irb extensions    -> gem 'irbtools' & 'irbtools-more'
+        clipboard support -> xclip
