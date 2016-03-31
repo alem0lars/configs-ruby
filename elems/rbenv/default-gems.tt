@@ -1,8 +1,9 @@
 # ─────────────────────────────────────────────────────────────────────────────┐
 #                                                                              │
 # File informations:                                                           │
-# - Name:    elems/irbrc.tt                                                    │
-# - Summary: The IRB configuration.                                            │
+# - Name:    elems/rbenv/default-gems.tt                                       │
+# - Summary: The default gems to be installed in every rbenv's ruby            │
+#            installation.                                                     │
 # - Authors:                                                                   │
 #   - Alessandro Molari <molari.alessandro@gmail.com> (alem0lars)              │
 #                                                                              │
@@ -31,6 +32,22 @@
 #                                                                              │
 # ─────────────────────────────────────────────────────────────────────────────┘
 
-require "irbtools/more"
+bundler
 
-# vim: set filetype=eruby.ruby :
+gist
+
+awesome_print
+
+byebug
+
+irbtools
+irbtools-more
+
+pry
+pry-theme
+pry-doc
+pry-byebug
+pry-inline
+pry-coolline
+
+# vim: set filetype=eruby.conf :

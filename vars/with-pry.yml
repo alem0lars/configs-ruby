@@ -1,0 +1,5 @@
+pry:
+  theme: tomorrow
+
+features:
+  - pry

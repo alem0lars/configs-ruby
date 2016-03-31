@@ -1,10 +1,13 @@
 elems:
-  - src: elems/(rbenv-default-gems)$
-    dst: ~/.<1>
+
+  - src: elems/rbenv/(default-gems)$
+    dst: ~/.rbenv-<1>
     only:
       features:
         - rbenv
-    notes: This default rbenv gems will be used only if the extension 'rbenv-default-gems' is installed
+    notes: |
+      This default rbenv gems will be used only if the extension
+      'rbenv-default-gems' is installed.
 
   - src: elems/(irbrc)$
     dst: ~/.<1>
@@ -13,5 +16,13 @@ elems:
         - ruby
     notes: |
       The following features will be enabled if their requirements are met:
-        irb extensions    -> gem 'irbtools' & 'irbtools-more'
-        clipboard support -> xclip
+        irb extensions    -> gems 'irbtools' & 'irbtools-more'
+        clipboard support -> package 'xclip'
+
+  - src: elems/(pryrc)$
+    dst: ~/.<1>
+    only:
+      features:
+        - pry
+    notes: |
+      To enable theme support, install the gem 'pry-theme'.
