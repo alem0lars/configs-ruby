@@ -31,14 +31,14 @@
 #                                                                              │
 # ─────────────────────────────────────────────────────────────────────────────┤
 <% define_locals do
-  variable "pry.theme", type: :string?
+  variable :"pry.theme", type: :string?, as: :pry_theme
 end -%>
 # ─────────────────────────────────────────────────────────────────────────────┘
 
 shell-mode
 
-<% locals?("pry.theme") do |theme| %>
-Pry.config.theme = "<%= theme %>"
+<% if locals? :pry_theme %>
+Pry.config.theme = "<%= local! :pry_theme %>"
 <% end -%>
 
 # vim: set filetype=eruby.ruby :

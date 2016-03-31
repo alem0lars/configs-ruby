@@ -26,3 +26,5 @@ elems:
         - pry
     notes: |
       To enable theme support, install the gem 'pry-theme'.
+
+# vim: set filetype=eruby.yaml :
