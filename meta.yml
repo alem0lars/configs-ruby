@@ -1,7 +1,7 @@
 elems:
 
   - src: elems/rbenv/(default-gems)$
-    dst: ~/.rbenv-<1>
+    dst: ~/.rbenv/<1>
     only:
       features:
         - rbenv
