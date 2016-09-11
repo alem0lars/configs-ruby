@@ -31,7 +31,7 @@
 #                                                                              │
 # ─────────────────────────────────────────────────────────────────────────────┤
 <% define_locals do
-  variable :"irb.document", type: :string, as: :document
+  variable :"ruby.document", type: :string, as: :document
 end -%>
 # ─────────────────────────────────────────────────────────────────────────────┘
 
@@ -44,9 +44,9 @@ end -%>
 :update_sources: true
 :verbose: true
 <% case local! :document %>
-<% when "yard" %>
+<% when :yard %>
 gem: "--document=yri"
-<% when "none" %>
+<% when nil %>
 install: --no-document
 update: --no-document
 <% end %>
