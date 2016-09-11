@@ -1,5 +1,11 @@
 elems:
 
+  - src: elems/(gemrc)$
+    dst: ~/.<1>
+    only:
+      features:
+        - ruby
+        
   - src: elems/rbenv/(default-gems)$
     dst: ~/.rbenv/<1>
     only:
