@@ -41,6 +41,7 @@ thor
 awesome_print
 
 byebug
+yard
 
 irbtools
 irbtools-more
