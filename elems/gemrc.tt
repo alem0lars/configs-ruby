@@ -31,7 +31,7 @@
 #                                                                              │
 # ─────────────────────────────────────────────────────────────────────────────┤
 <% define_locals do
-  variable :"ruby.document", type: :string, as: :document
+  variable :"ruby.document", type: :string?, as: :document
 end -%>
 # ─────────────────────────────────────────────────────────────────────────────┘
 
