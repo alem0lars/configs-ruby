@@ -43,10 +43,11 @@ end -%>
 - https://rubygems.org/
 :update_sources: true
 :verbose: true
-<% case local! :document %>
-<% when :yard %>
-gem: "--document=yri"
-<% when nil %>
+<% if local? :document %>
+  <% if local!(:document) == :yard %>
+  gem: "--document=yri"
+  <% end %>
+<% else %>
 install: --no-document
 update: --no-document
 <% end %>
