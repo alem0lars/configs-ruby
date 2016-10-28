@@ -35,10 +35,12 @@
 end -%>
 # ─────────────────────────────────────────────────────────────────────────────┘
 
+
 shell-mode
 
-<% if locals? :pry_theme %>
+<% if local? :pry_theme %>
 Pry.config.theme = "<%= local! :pry_theme %>"
 <% end -%>
+
 
 # vim: set filetype=eruby.ruby :

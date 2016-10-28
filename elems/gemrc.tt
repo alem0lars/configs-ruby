@@ -45,7 +45,7 @@ end -%>
 :verbose: true
 <% if local? :document %>
   <% if local!(:document) == :yard %>
-  gem: "--document=yri"
+gem: "--document=yri"
   <% end %>
 <% else %>
 install: --no-document

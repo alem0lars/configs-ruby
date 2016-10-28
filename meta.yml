@@ -1,36 +1,29 @@
 elems:
 
-  - src: elems/(gemrc)$
-    dst: ~/.<1>
-    only:
-      features:
-        - ruby
-        
-  - src: elems/rbenv/(default-gems)$
-    dst: ~/.rbenv/<1>
-    only:
-      features:
-        - rbenv
+  - src:  ^(gemrc)$
+    dst:  ~/.<1>
+    only: f?ruby
+
+  - src:  ^rbenv/(default-gems)$
+    dst:  ~/.rbenv/<1>
+    only: f?ruby && f?rbenv
     notes: |
       This default rbenv gems will be used only if the extension
-      'rbenv-default-gems' is installed.
+      `rbenv-default-gems` is installed.
 
-  - src: elems/(irbrc)$
+  - src: ^(irbrc)$
     dst: ~/.<1>
-    only:
-      features:
-        - ruby
+    only: f?ruby && f?irb
     notes: |
-      The following features will be enabled if their requirements are met:
-        irb extensions    -> gems 'irbtools' & 'irbtools-more'
-        clipboard support -> package 'xclip'
+      The following features will be enabled if their requirements are met
+        irb extensions    -> gems `irbtools` & `irbtools-more`
+        clipboard support -> package `xclip`
 
-  - src: elems/(pryrc)$
+  - src: ^(pryrc)$
     dst: ~/.<1>
-    only:
-      features:
-        - pry
+    only: f?ruby && f?pry
     notes: |
-      To enable theme support, install the gem 'pry-theme'.
+      To enable theme support, install the gem `pry-theme`.
+
 
 # vim: set filetype=eruby.yaml :

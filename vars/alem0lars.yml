@@ -1,0 +1,8 @@
+# => inherits: generic, with-rbenv, with-pry <= #
+
+
+ruby:
+  document: yard
+
+
+# vim: set filetype=eruby.yaml :
