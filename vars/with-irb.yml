@@ -1,8 +1,5 @@
-pry:
-  theme: tomorrow
-
 features:
-  - pry
+  - irb
 
 
 # vim: set filetype=eruby.yaml :
